@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://doax7febbm4tt"]
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_a7to3"]
+[ext_resource type="Script" uid="uid://c8sakrgsj2mft" path="res://Scenes/Characters/perso_princ.gd" id="1_cyjcc"]
+[ext_resource type="PackedScene" uid="uid://bo3gsin2nuepb" path="res://Assets/Character/Meshy_AI_PERSO_PRINCIPAL_1006152334_texture.glb" id="1_hasms"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_05w8q"]
+radius = 0.30615234
+height = 1.9088898
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hasms"]
 albedo_color = Color(0, 0, 0, 1)
@@ -10,11 +15,28 @@ material = SubResource("StandardMaterial3D_hasms")
 
 [node name="Node3D" type="Node3D" unique_id=363878667]
 
-[node name="MultiMeshInstance3D" type="MeshInstance3D" parent="." unique_id=184747445]
-mesh = SubResource("CapsuleMesh_a7to3")
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1024436215]
+script = ExtResource("1_cyjcc")
 
-[node name="Camera_jeu" type="Camera3D" parent="." unique_id=1640163277]
-transform = Transform3D(1, 0, 0, 0, 0.9264761, 0.37635365, 0, -0.37635365, 0.9264761, 0, 1.4364004, 1.8277371)
+[node name="skin" parent="CharacterBody3D" unique_id=1732458732 instance=ExtResource("1_hasms")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.12088153, 0.71005166, -0.15077218)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1209588738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.111980796, 0.6948066, -0.03900002)
+shape = SubResource("CapsuleShape3D_05w8q")
+metadata/_edit_group_ = true
+
+[node name="CameraPivot" type="Node3D" parent="CharacterBody3D" unique_id=778496988]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.060474843, 1.4795318, 0)
+
+[node name="Camera_jeu" type="Camera3D" parent="CharacterBody3D/CameraPivot" unique_id=1640163277]
+transform = Transform3D(1, 0, 0, 0, 0.9264761, 0.37635365, 0, -0.37635365, 0.9264761, -0.0633103, 0.48254848, 1.5222566)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=1756298386]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049196243, -1.2239654, -0.6670742)
+use_collision = true
+size = Vector3(7.083191, 1, 11.752632)
 
 [node name="Camera_UI" type="Camera3D" parent="." unique_id=1626362485 groups=["camera_ui"]]
 transform = Transform3D(-0.9999528, 0, -0.009721357, 0, 1, 0, 0.009721357, 0, -0.9999528, -0.032950014, 0.769, -1.771)
