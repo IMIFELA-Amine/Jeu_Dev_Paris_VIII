@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://bdlmuycug61cl"]
+
+[ext_resource type="Script" uid="uid://bp13avp3ilfqk" path="res://Scripts/Menu-option/menu.gd" id="1_viua4"]
+[ext_resource type="Texture2D" uid="uid://byjk7jgpjy03i" path="res://Assets/Menu/Camp enneigé, souvenirs de survie.png" id="2_5do38"]
+[ext_resource type="Texture2D" uid="uid://qp085at28ljd" path="res://Assets/Menu/continuer.png" id="3_h1t7w"]
+[ext_resource type="Texture2D" uid="uid://e3087sm0qi4c" path="res://Assets/Menu/continuer_selec.png" id="4_gdpsg"]
+[ext_resource type="Texture2D" uid="uid://qrfa301uncws" path="res://Assets/Menu/nv_partie.png" id="5_7cf0n"]
+[ext_resource type="Texture2D" uid="uid://cbk66djem46jc" path="res://Assets/Menu/nv_partie_sel.png" id="6_dehrl"]
+[ext_resource type="Texture2D" uid="uid://dtrx3o5eayifh" path="res://Assets/Menu/option.png" id="7_oj2qq"]
+[ext_resource type="Texture2D" uid="uid://bqhcb36ojfr4i" path="res://Assets/Menu/option_sel.png" id="8_25kfc"]
+[ext_resource type="Texture2D" uid="uid://ktdgwyeculbm" path="res://Assets/Menu/quitter.png" id="9_h1hd1"]
+[ext_resource type="Texture2D" uid="uid://bmjvi1aun5dvo" path="res://Assets/Menu/quitter_sel.png" id="10_nxrto"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5p1lm"]
+font_size = 48
+font_color = Color(0.69803923, 0.60784316, 0.5882353, 1)
+
+[node name="Node2D" type="Node2D" unique_id=1957835166]
+script = ExtResource("1_viua4")
+
+[node name="backGround" type="Sprite2D" parent="." unique_id=579957693]
+position = Vector2(575, 324)
+scale = Vector2(0.6867633, 0.6927807)
+texture = ExtResource("2_5do38")
+
+[node name="menu" type="Control" parent="." unique_id=787152699]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Accueil" type="Label" parent="menu" unique_id=1635194041]
+layout_mode = 0
+offset_left = 261.0
+offset_top = 32.0
+offset_right = 425.0
+offset_bottom = 179.0
+rotation = -0.06060051
+scale = Vector2(1.100244, 0.8203656)
+text = "Accueil
+"
+label_settings = SubResource("LabelSettings_5p1lm")
+
+[node name="continuer" type="Button" parent="menu" unique_id=1017436826]
+layout_mode = 0
+offset_left = 127.000015
+offset_top = 147.0
+offset_right = 135.00002
+offset_bottom = 155.0
+rotation = -0.0722234
+scale = Vector2(54.62466, 4.9927306)
+
+[node name="Continuer" type="Sprite2D" parent="menu/continuer" unique_id=242378166]
+position = Vector2(3.7939138, 3.6055603)
+rotation = 0.023296556
+scale = Vector2(0.0046657017, 0.03050538)
+skew = -0.029670598
+texture = ExtResource("3_h1t7w")
+
+[node name="ContinuerSelec" type="Sprite2D" parent="menu/continuer" unique_id=972142894]
+visible = false
+position = Vector2(3.9243693, 3.3071938)
+rotation = -0.0018649951
+scale = Vector2(0.004317912, 0.03682359)
+texture = ExtResource("4_gdpsg")
+
+[node name="nvpartie" type="Button" parent="menu" unique_id=2099459]
+layout_mode = 0
+offset_left = 142.0
+offset_top = 201.0
+offset_right = 150.0
+offset_bottom = 209.0
+rotation = -0.053690143
+scale = Vector2(48.78248, 6.8456655)
+
+[node name="NvPartie" type="Sprite2D" parent="menu/nvpartie" unique_id=1808922663]
+position = Vector2(4.0346913, 3.4133897)
+scale = Vector2(0.008126079, 0.040403116)
+texture = ExtResource("5_7cf0n")
+
+[node name="NvPartieSel" type="Sprite2D" parent="menu/nvpartie" unique_id=320751180]
+visible = false
+position = Vector2(3.9557056, 3.5629435)
+rotation = 0.0042878604
+scale = Vector2(0.007051352, 0.03403453)
+texture = ExtResource("6_dehrl")
+
+[node name="option" type="Button" parent="menu" unique_id=993774449]
+layout_mode = 0
+offset_left = 155.99998
+offset_top = 261.00003
+offset_right = 163.99998
+offset_bottom = 269.00003
+rotation = -0.07361025
+scale = Vector2(48.413185, 6.9770684)
+
+[node name="Option" type="Sprite2D" parent="menu/option" unique_id=389085317]
+position = Vector2(3.9132564, 4.014427)
+scale = Vector2(0.008589879, 0.038189206)
+texture = ExtResource("7_oj2qq")
+
+[node name="OptionSelec" type="Sprite2D" parent="menu/option" unique_id=1044192674]
+visible = false
+position = Vector2(3.74694, 4.0730376)
+scale = Vector2(0.008863735, 0.03352401)
+texture = ExtResource("8_25kfc")
+
+[node name="crédit" type="Button" parent="menu" unique_id=1208554827]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="quitter" type="Button" parent="menu" unique_id=591170800]
+layout_mode = 0
+offset_left = 166.0
+offset_top = 389.99997
+offset_right = 174.0
+offset_bottom = 397.99997
+rotation = -0.09915568
+scale = Vector2(46.922886, 6.763127)
+
+[node name="Quitter" type="Sprite2D" parent="menu/quitter" unique_id=1134627113]
+position = Vector2(4.0145397, 3.8110144)
+rotation = 0.0072823167
+scale = Vector2(0.008598003, 0.041231528)
+texture = ExtResource("9_h1hd1")
+
+[node name="QuitterSelec" type="Sprite2D" parent="menu/quitter" unique_id=1697067094]
+visible = false
+position = Vector2(3.991223, 3.9435046)
+rotation = 0.023342427
+scale = Vector2(0.008952926, 0.037747018)
+texture = ExtResource("10_nxrto")
+
+[connection signal="mouse_entered" from="menu/continuer" to="." method="_on_continuer_mouse_entered"]
+[connection signal="mouse_exited" from="menu/continuer" to="." method="_on_continuer_mouse_exited"]
+[connection signal="pressed" from="menu/continuer" to="." method="_on_continuer_pressed"]
+[connection signal="mouse_entered" from="menu/nvpartie" to="." method="_on_nvpartie_mouse_entered"]
+[connection signal="mouse_exited" from="menu/nvpartie" to="." method="_on_nvpartie_mouse_exited"]
+[connection signal="pressed" from="menu/nvpartie" to="." method="_on_nvpartie_pressed"]
+[connection signal="mouse_entered" from="menu/option" to="." method="_on_option_mouse_entered"]
+[connection signal="mouse_exited" from="menu/option" to="." method="_on_option_mouse_exited"]
+[connection signal="pressed" from="menu/option" to="." method="_on_option_pressed"]
+[connection signal="mouse_entered" from="menu/quitter" to="." method="_on_quitter_mouse_entered"]
+[connection signal="mouse_exited" from="menu/quitter" to="." method="_on_quitter_mouse_exited"]
+[connection signal="pressed" from="menu/quitter" to="." method="_on_quitter_pressed"]

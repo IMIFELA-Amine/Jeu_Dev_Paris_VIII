@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://doax7febbm4tt"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_a7to3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hasms"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cyjcc"]
+material = SubResource("StandardMaterial3D_hasms")
+
+[node name="Node3D" type="Node3D" unique_id=363878667]
+
+[node name="MultiMeshInstance3D" type="MeshInstance3D" parent="." unique_id=184747445]
+mesh = SubResource("CapsuleMesh_a7to3")
+
+[node name="Camera_jeu" type="Camera3D" parent="." unique_id=1640163277]
+transform = Transform3D(1, 0, 0, 0, 0.9264761, 0.37635365, 0, -0.37635365, 0.9264761, 0, 1.4364004, 1.8277371)
+
+[node name="Camera_UI" type="Camera3D" parent="." unique_id=1626362485 groups=["camera_ui"]]
+transform = Transform3D(-0.9999528, 0, -0.009721357, 0, 1, 0, 0.009721357, 0, -0.9999528, -0.032950014, 0.769, -1.771)
+fov = 41.7
+
+[node name="MultiMeshInstance3D2" type="MeshInstance3D" parent="." unique_id=197052176]
+transform = Transform3D(3.3924263, 0, 0, 0, -0.05608732, 1.986795, 0, -0.95022017, -0.11727177, 0, 0.8955754, 2.7739425)
+mesh = SubResource("PlaneMesh_cyjcc")

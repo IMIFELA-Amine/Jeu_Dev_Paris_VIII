@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cfm2p0qpbr6x2"]
+
+[ext_resource type="PackedScene" uid="uid://doax7febbm4tt" path="res://Scenes/Characters/Perso.tscn" id="1_03nni"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_c8vy4"]
+
+[node name="Node3D" type="Node3D" unique_id=1704194263]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=457054584]
+transform = Transform3D(21.948944, 0, 0, 0, 0.31949466, 0, 0, 0, 13.409864, 0, -0.13977623, 0)
+mesh = SubResource("BoxMesh_c8vy4")
+
+[node name="Node3D" parent="." unique_id=363878667 instance=ExtResource("1_03nni")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.847311, 1.708147, 1.3188286)
