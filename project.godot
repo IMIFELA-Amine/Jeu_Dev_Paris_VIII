@@ -23,7 +23,6 @@ GameManager="*uid://bfhwgvjnst2vo"
 [display]
 
 window/size/mode=3
-window/size/initial_position_type=3
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"

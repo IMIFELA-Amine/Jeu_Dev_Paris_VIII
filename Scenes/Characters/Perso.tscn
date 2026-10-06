@@ -28,7 +28,7 @@ shape = SubResource("CapsuleShape3D_05w8q")
 metadata/_edit_group_ = true
 
 [node name="CameraPivot" type="Node3D" parent="CharacterBody3D" unique_id=778496988]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.060474843, 1.4795318, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08903313, 1.4795318, 0)
 
 [node name="Camera_jeu" type="Camera3D" parent="CharacterBody3D/CameraPivot" unique_id=1640163277]
 transform = Transform3D(1, 0, 0, 0, 0.9264761, 0.37635365, 0, -0.37635365, 0.9264761, -0.0633103, 0.48254848, 1.5222566)
