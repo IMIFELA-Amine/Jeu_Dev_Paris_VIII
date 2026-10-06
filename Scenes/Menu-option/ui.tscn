@@ -4,3 +4,20 @@
 
 [node name="UI" type="Node2D" unique_id=1458100484]
 script = ExtResource("1_yvi3c")
+
+[node name="CameraPreview" type="SubViewportContainer" parent="." unique_id=903445828]
+offset_right = 260.0
+offset_bottom = 180.0
+mouse_filter = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="CameraPreview" unique_id=655481401]
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(260, 180)
+render_target_update_mode = 4
+
+[node name="Frame" type="Panel" parent="CameraPreview" unique_id=446982567]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+mouse_filter = 2
