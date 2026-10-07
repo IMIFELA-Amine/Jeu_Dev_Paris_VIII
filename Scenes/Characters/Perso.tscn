@@ -16,6 +16,7 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_05w8q"]
+
 radius = 0.18310547
 height = 1.7387333
 
