@@ -1,14 +1,27 @@
 [gd_scene format=3 uid="uid://cfm2p0qpbr6x2"]
 
 [ext_resource type="PackedScene" uid="uid://doax7febbm4tt" path="res://Scenes/Characters/Perso.tscn" id="1_03nni"]
+[ext_resource type="Texture2D" uid="uid://dwfvjf0xwy81j" path="res://Assets/Character/Meshy_AI_PERSO_PRINCIPAL_1006152334_texture_normal.png" id="1_c8vy4"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xm53j"]
+albedo_texture = ExtResource("1_c8vy4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_c8vy4"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_03nni"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Node3D" type="Node3D" unique_id=1704194263]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=457054584]
-transform = Transform3D(21.948944, 0, 0, 0, 0.31949466, 0, 0, 0, 13.409864, 0, -0.13977623, 0)
+transform = Transform3D(21.948944, 0, 0, 0, 0.31949466, 0, 0, 0, 13.409864, -0.002557516, -0.13641429, 0.0006569624)
+material_override = SubResource("StandardMaterial3D_xm53j")
 mesh = SubResource("BoxMesh_c8vy4")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D" unique_id=405203885]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D" unique_id=1965018074]
+shape = SubResource("ConcavePolygonShape3D_03nni")
+
 [node name="Node3D" parent="." unique_id=363878667 instance=ExtResource("1_03nni")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.847311, 1.708147, 1.3188286)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.9057364, 1.8653746, 1.327354)
