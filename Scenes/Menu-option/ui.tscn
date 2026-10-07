@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://devb852vtmdrs"]
 
 [ext_resource type="Script" uid="uid://c3h6nore5hm4f" path="res://Scripts/Menu-option/ui.gd" id="1_yvi3c"]
-[ext_resource type="PackedScene" uid="uid://bo3gsin2nuepb" path="res://Assets/Character/Meshy_AI_PERSO_PRINCIPAL_1006152334_texture.glb" id="2_yvi3c"]
 [ext_resource type="Shader" uid="uid://dotjyb1ap1pf4" path="res://Shader/ui.gdshader" id="3_0laa4"]
 [ext_resource type="Texture2D" uid="uid://bstk2ioqko1s2" path="res://Assets/UI/progress-bar-frame.png" id="3_0p0q4"]
 [ext_resource type="Texture2D" uid="uid://dwkmfrqgwr00c" path="res://Assets/UI/progress-bar-circle.png" id="4_xld48"]
+[ext_resource type="PackedScene" uid="uid://bsec43nbxljm0" path="res://Animation/Animation/Idle/BreathingIdle.fbx" id="5_0p0q4"]
 
 [sub_resource type="Shader" id="Shader_0sgth"]
 code = "shader_type canvas_item;
@@ -68,24 +68,21 @@ stretch = true
 [node name="SubViewport" type="SubViewport" parent="CAM_life/CameraPreview" unique_id=1190656084]
 handle_input_locally = false
 msaa_3d = 3
-screen_space_aa = 1
+screen_space_aa = 2
 scaling_3d_scale = 2.0
 texture_mipmap_bias = -2.0
 size = Vector2i(139, 130)
-render_target_update_mode = 4
 
 [node name="cam_ui" type="Node3D" parent="CAM_life/CameraPreview/SubViewport" unique_id=43578618]
 
-[node name="Meshy_AI_PERSO_PRINCIPAL_1006152334_texture" parent="CAM_life/CameraPreview/SubViewport/cam_ui" unique_id=1025311283 instance=ExtResource("2_yvi3c")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.007104993, 0.95922965, -1.0541534)
+[node name="BreathingIdle" parent="CAM_life/CameraPreview/SubViewport/cam_ui" unique_id=971289197 instance=ExtResource("5_0p0q4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.014347553, 0.9705471, -1.1857477)
 
 [node name="Camera3D" type="Camera3D" parent="CAM_life/CameraPreview/SubViewport/cam_ui" unique_id=1027538313]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.010830581, 1.7282696, 0)
 top_level = true
-doppler_tracking = 1
 current = true
-fov = 25.5
-near = 0.001
+fov = 25.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="CAM_life/CameraPreview/SubViewport/cam_ui" unique_id=1149689068]
 transform = Transform3D(1, 0, 0, 0, -0.011326949, -0.99993587, 0, 0.99993587, -0.011326949, 0, 1.7282696, -2.2798436)
