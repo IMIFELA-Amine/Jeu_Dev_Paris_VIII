@@ -7,12 +7,6 @@
 radius = 0.30615234
 height = 1.9088898
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hasms"]
-albedo_color = Color(0, 0, 0, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_cyjcc"]
-material = SubResource("StandardMaterial3D_hasms")
-
 [node name="Node3D" type="Node3D" unique_id=363878667]
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1024436215]
@@ -37,11 +31,3 @@ transform = Transform3D(1, 0, 0, 0, 0.9264761, 0.37635365, 0, -0.37635365, 0.926
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.049196243, -1.2239654, -0.6670742)
 use_collision = true
 size = Vector3(7.083191, 1, 11.752632)
-
-[node name="Camera_UI" type="Camera3D" parent="." unique_id=1626362485]
-transform = Transform3D(-0.9999528, 0, -0.009721357, 0, 1, 0, 0.009721357, 0, -0.9999528, -0.032950014, 0.769, -1.771)
-fov = 26.0
-
-[node name="MultiMeshInstance3D2" type="MeshInstance3D" parent="." unique_id=197052176]
-transform = Transform3D(3.3924263, 0, 0, 0, -0.05608732, 1.986795, 0, -0.95022017, -0.11727177, 0, 0.8955754, 2.7739425)
-mesh = SubResource("PlaneMesh_cyjcc")
