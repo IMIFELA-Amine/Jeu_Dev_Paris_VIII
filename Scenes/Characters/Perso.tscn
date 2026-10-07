@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bsec43nbxljm0" path="res://Animation/Animation/Idle/BreathingIdle.fbx" id="2_cyjcc"]
 [ext_resource type="Animation" uid="uid://50devuih80cf" path="res://Animation/Animation/Marche/jump.res" id="3_6uptn"]
 [ext_resource type="Animation" uid="uid://cxpabk5qbwhl6" path="res://Animation/Animation/Marche/back.res" id="3_ymijj"]
-[ext_resource type="Animation" uid="uid://dnxhogaeg2oiw" path="res://Animation/Animation/Marche/run.res" id="4_ymijj"]
-[ext_resource type="Animation" uid="uid://bkbsbtmn5x1ld" path="res://Animation/Animation/Marche/walk.res" id="5_jq4nt"]
+[ext_resource type="Animation" uid="uid://bowbhuwd38ac6" path="res://Animation/Animation/Marche/run.res" id="4_ymijj"]
+[ext_resource type="Animation" uid="uid://bhnv323fo7tlr" path="res://Animation/Animation/Marche/walk.res" id="5_jq4nt"]
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j2145"]
 _data = {
@@ -16,7 +16,6 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_05w8q"]
-
 radius = 0.18310547
 height = 1.7387333
 
@@ -29,7 +28,7 @@ sprint_speed = 7.0
 [node name="skin" parent="CharacterBody3D" unique_id=907561475 instance=ExtResource("2_cyjcc")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 
-[node name="Skeleton3D" parent="CharacterBody3D/skin" index="0" unique_id=1680346186]
+[node name="Skeleton3D" parent="CharacterBody3D/skin" index="0" unique_id=301305140]
 bones/0/position = Vector3(-4.1629217e-05, 0.9602652, 0.0029754918)
 bones/0/rotation = Quaternion(-0.013263256, -0.0010670754, -0.009047874, 0.99987054)
 bones/1/rotation = Quaternion(-0.02745364, -0.0011071912, -0.00016713343, 0.9996225)
@@ -84,7 +83,7 @@ bones/61/rotation = Quaternion(-0.20539555, 0.03553312, -0.010396885, 0.9779785)
 bones/62/rotation = Quaternion(0.5201159, 0.12577876, -0.038685374, 0.84389734)
 bones/63/rotation = Quaternion(0.32819957, 0.032649085, -0.011351375, 0.9439758)
 
-[node name="AnimationPlayer" parent="CharacterBody3D/skin" index="1" unique_id=1774899037]
+[node name="AnimationPlayer" parent="CharacterBody3D/skin" index="1" unique_id=1596757818]
 libraries/animation = SubResource("AnimationLibrary_j2145")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1209588738]
