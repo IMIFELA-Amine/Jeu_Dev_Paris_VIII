@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://bstk2ioqko1s2" path="res://Assets/UI/progress-bar-frame.png" id="3_0p0q4"]
 [ext_resource type="Texture2D" uid="uid://dwkmfrqgwr00c" path="res://Assets/UI/progress-bar-circle.png" id="4_xld48"]
 [ext_resource type="PackedScene" uid="uid://bsec43nbxljm0" path="res://Animation/Animation/Idle/BreathingIdle.fbx" id="5_0p0q4"]
+[ext_resource type="Texture2D" uid="uid://dokkq0d5542v" path="res://Assets/UI/touche e.png" id="6_pwyaw"]
+[ext_resource type="Texture2D" uid="uid://xmuy8w4b7bf7" path="res://Assets/UI/sac.png" id="7_0660c"]
 
 [sub_resource type="Shader" id="Shader_0sgth"]
 code = "shader_type canvas_item;
@@ -72,6 +74,7 @@ screen_space_aa = 2
 scaling_3d_scale = 2.0
 texture_mipmap_bias = -2.0
 size = Vector2i(139, 130)
+render_target_update_mode = 4
 
 [node name="cam_ui" type="Node3D" parent="CAM_life/CameraPreview/SubViewport" unique_id=43578618]
 
@@ -96,3 +99,15 @@ light_energy = 5.0
 light_specular = 0.885
 spot_range = 1.115
 spot_attenuation = -2.95
+
+[node name="Node" type="Node" parent="." unique_id=763142756]
+
+[node name="ToucheE" type="Sprite2D" parent="Node" unique_id=751077761]
+position = Vector2(83.49999, 688.50006)
+scale = Vector2(0.4044793, 0.4044793)
+texture = ExtResource("6_pwyaw")
+
+[node name="Sac" type="Sprite2D" parent="Node" unique_id=892128585]
+position = Vector2(32.500004, 687.5)
+scale = Vector2(0.522146, 0.522146)
+texture = ExtResource("7_0660c")

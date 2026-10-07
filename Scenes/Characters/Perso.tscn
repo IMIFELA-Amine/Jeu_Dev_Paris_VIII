@@ -33,6 +33,7 @@ run_ref_speed = 6.0
 [node name="skin" parent="CharacterBody3D" unique_id=907561475 instance=ExtResource("2_cyjcc")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 
+
 [node name="Skeleton3D" parent="CharacterBody3D/skin" index="0" unique_id=1680346186]
 bones/0/position = Vector3(0.0003461456, 0.9653844, 0.0008592694)
 bones/0/rotation = Quaternion(0.016916983, 0.016803022, 0.0011566604, 0.99971503)
@@ -88,7 +89,8 @@ bones/61/rotation = Quaternion(-0.21240118, -0.028464582, -0.02416442, 0.9764689
 bones/62/rotation = Quaternion(0.5516627, 0.07301253, -0.074726485, 0.8274983)
 bones/63/rotation = Quaternion(0.36778757, 0.04199812, -0.011301744, 0.9288923)
 
-[node name="AnimationPlayer" parent="CharacterBody3D/skin" index="1" unique_id=1774899037]
+
+[node name="AnimationPlayer" parent="CharacterBody3D/skin" index="1" unique_id=1596757818]
 libraries/animation = SubResource("AnimationLibrary_j2145")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1209588738]
