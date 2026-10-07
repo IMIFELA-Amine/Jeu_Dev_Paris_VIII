@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c8sakrgsj2mft" path="res://Scenes/Characters/perso_princ.gd" id="1_cyjcc"]
 [ext_resource type="PackedScene" uid="uid://bsec43nbxljm0" path="res://Animation/Animation/Idle/BreathingIdle.fbx" id="2_cyjcc"]
-[ext_resource type="Animation" uid="uid://26nplc3ym3cx" path="res://Animation/Animation/Marche/jump.res" id="3_6uptn"]
-[ext_resource type="Animation" uid="uid://buss3hqoqclop" path="res://Animation/Animation/Marche/back.res" id="3_ymijj"]
+[ext_resource type="Animation" uid="uid://50devuih80cf" path="res://Animation/Animation/Marche/jump.res" id="3_6uptn"]
+[ext_resource type="Animation" uid="uid://cxpabk5qbwhl6" path="res://Animation/Animation/Marche/back.res" id="3_ymijj"]
 [ext_resource type="Animation" uid="uid://dnxhogaeg2oiw" path="res://Animation/Animation/Marche/run.res" id="4_ymijj"]
 [ext_resource type="Animation" uid="uid://bkbsbtmn5x1ld" path="res://Animation/Animation/Marche/walk.res" id="5_jq4nt"]
 
@@ -23,6 +23,7 @@ height = 1.7387333
 
 [node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=1024436215]
 script = ExtResource("1_cyjcc")
+sprint_speed = 7.0
 
 [node name="skin" parent="CharacterBody3D" unique_id=907561475 instance=ExtResource("2_cyjcc")]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)

@@ -10,13 +10,40 @@
 [ext_resource type="Texture2D" uid="uid://bqhcb36ojfr4i" path="res://Assets/Menu/option_sel.png" id="8_25kfc"]
 [ext_resource type="Texture2D" uid="uid://ktdgwyeculbm" path="res://Assets/Menu/quitter.png" id="9_h1hd1"]
 [ext_resource type="Texture2D" uid="uid://bmjvi1aun5dvo" path="res://Assets/Menu/quitter_sel.png" id="10_nxrto"]
+[ext_resource type="Script" uid="uid://bfqvysvj0gklg" path="res://Scenes/Menu-option/halo.gd" id="11_5do38"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5p1lm"]
 font_size = 48
 font_color = Color(0.69803923, 0.60784316, 0.5882353, 1)
 
+[sub_resource type="Gradient" id="Gradient_viua4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_05w8q"]
+gradient = SubResource("Gradient_viua4")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_h1t7w"]
+blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_5do38"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pd8um"]
+gradient = SubResource("Gradient_5do38")
+use_hdr = true
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
 [node name="Node2D" type="Node2D" unique_id=1957835166]
 script = ExtResource("1_viua4")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1644462858]
+color = Color(0.3137255, 0.3137255, 0.41568628, 1)
 
 [node name="backGround" type="Sprite2D" parent="." unique_id=579957693]
 position = Vector2(575, 324)
@@ -59,9 +86,9 @@ texture = ExtResource("3_h1t7w")
 
 [node name="ContinuerSelec" type="Sprite2D" parent="menu/continuer" unique_id=972142894]
 visible = false
-position = Vector2(3.9243693, 3.3071938)
+position = Vector2(4.018406, 3.5434997)
 rotation = -0.0018649951
-scale = Vector2(0.004317912, 0.03682359)
+scale = Vector2(0.0046097813, 0.038126513)
 texture = ExtResource("4_gdpsg")
 
 [node name="nvpartie" type="Button" parent="menu" unique_id=2099459]
@@ -131,6 +158,31 @@ position = Vector2(3.991223, 3.9435046)
 rotation = 0.023342427
 scale = Vector2(0.008952926, 0.037747018)
 texture = ExtResource("10_nxrto")
+
+[node name="Halo" type="PointLight2D" parent="." unique_id=967083167]
+position = Vector2(65.85286, 292.9635)
+rotation = 3.1406784
+scale = Vector2(6.994405, 7.825278)
+color = Color(1, 0.7019608, 0.2784314, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_05w8q")
+texture_scale = 2.85
+script = ExtResource("11_5do38")
+flicker_speed = 300.0
+blink_min_delay = 3.0
+dim_min_delay = 4.0
+dim_max_delay = 10.0
+shift_color_when_dim = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Halo" unique_id=11426019]
+modulate = Color(1, 0.6901961, 0.2509804, 1)
+material = SubResource("CanvasItemMaterial_h1t7w")
+position = Vector2(8.415062, -0.76453364)
+scale = Vector2(0.35020885, 0.3233001)
+texture = SubResource("GradientTexture2D_pd8um")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1825969032]
+position = Vector2(7, 300)
 
 [connection signal="mouse_entered" from="menu/continuer" to="." method="_on_continuer_mouse_entered"]
 [connection signal="mouse_exited" from="menu/continuer" to="." method="_on_continuer_mouse_exited"]
