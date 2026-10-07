@@ -160,29 +160,49 @@ scale = Vector2(0.008952926, 0.037747018)
 texture = ExtResource("10_nxrto")
 
 [node name="Halo" type="PointLight2D" parent="." unique_id=967083167]
-position = Vector2(65.85286, 292.9635)
+position = Vector2(65.00001, 294.99997)
 rotation = 3.1406784
-scale = Vector2(6.994405, 7.825278)
+scale = Vector2(6.077609, 7.02456)
 color = Color(1, 0.7019608, 0.2784314, 1)
 energy = 1.2
 texture = SubResource("GradientTexture2D_05w8q")
 texture_scale = 2.85
 script = ExtResource("11_5do38")
+flicker_amount = 0.2
 flicker_speed = 300.0
 blink_min_delay = 3.0
-dim_min_delay = 4.0
-dim_max_delay = 10.0
-shift_color_when_dim = false
+dim_min_delay = 5.0
+dim_max_delay = 15.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Halo" unique_id=11426019]
 modulate = Color(1, 0.6901961, 0.2509804, 1)
 material = SubResource("CanvasItemMaterial_h1t7w")
-position = Vector2(8.415062, -0.76453364)
+position = Vector2(6.4162436, 0.71686053)
 scale = Vector2(0.35020885, 0.3233001)
 texture = SubResource("GradientTexture2D_pd8um")
 
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1825969032]
-position = Vector2(7, 300)
+[node name="Halo2" type="PointLight2D" parent="." unique_id=422863636]
+position = Vector2(679, 254)
+rotation = 3.1406784
+scale = Vector2(1.4521362, 1.2595665)
+color = Color(1, 0.7019608, 0.2784314, 1)
+energy = 1.2
+texture = SubResource("GradientTexture2D_05w8q")
+texture_scale = 2.85
+script = ExtResource("11_5do38")
+base_energy = 1.0
+flicker_amount = 0.2
+flicker_speed = 300.0
+blink_min_delay = 6.0
+blink_depth = 0.5
+dim_min_delay = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Halo2" unique_id=1564335036]
+modulate = Color(1, 0.6901961, 0.2509804, 1)
+material = SubResource("CanvasItemMaterial_h1t7w")
+position = Vector2(0.90338904, -4.0967402)
+scale = Vector2(0.53363585, 0.4520188)
+texture = SubResource("GradientTexture2D_pd8um")
 
 [connection signal="mouse_entered" from="menu/continuer" to="." method="_on_continuer_mouse_entered"]
 [connection signal="mouse_exited" from="menu/continuer" to="." method="_on_continuer_mouse_exited"]
