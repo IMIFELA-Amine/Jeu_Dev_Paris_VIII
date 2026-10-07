@@ -1,6 +1,7 @@
 extends CharacterBody3D
 
 @export var speed: float = 5.0
+@export var back_speed: float = 3.5   # Vitesse de déplacement en marche arrière
 @export var sprint_speed: float = 8.5
 
 # Physique réactive (virages fluides et arrêt net sans glissement)
@@ -27,6 +28,13 @@ extends CharacterBody3D
 @export var anim_back: String = "animation/back"
 @export var anim_run: String = "animation/run"
 @export var anim_jump: String = "animation/jump"
+
+# Vitesse de déplacement pour laquelle les pieds collent au sol (animation à vitesse 1.0)
+# Si ça patine : l'animation est trop lente pour le déplacement -> BAISSE la valeur
+# Si les pieds "courent sur place" plus vite que le sol : -> AUGMENTE la valeur
+@export var walk_ref_speed: float = 5.0
+@export var back_ref_speed: float = 3.5
+@export var run_ref_speed: float = 8.5
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var pitch: float = 0.0
@@ -94,7 +102,13 @@ func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	var is_moving_back := input_dir.y > 0.1
 	var is_sprinting := Input.is_action_pressed("sprint") and not is_moving_back
-	var current_target_speed := sprint_speed if is_sprinting else speed
+	
+	# Vitesse cible : recul, sprint ou marche normale
+	var current_target_speed := speed
+	if is_moving_back:
+		current_target_speed = back_speed
+	elif is_sprinting:
+		current_target_speed = sprint_speed
 
 	var cam_basis := camera_pivot.global_transform.basis
 	var direction := (cam_basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
@@ -139,11 +153,11 @@ func _update_animations(horizontal_speed: float, is_sprinting: bool, is_moving_b
 
 	if horizontal_speed > 0.1:
 		if is_moving_back:
-			_play_anim(anim_back, 0.15, horizontal_speed / speed)
+			_play_anim(anim_back, 0.15, horizontal_speed / back_ref_speed)
 		elif is_sprinting:
-			_play_anim(anim_run, 0.15, horizontal_speed / sprint_speed)
+			_play_anim(anim_run, 0.15, horizontal_speed / run_ref_speed)
 		else:
-			_play_anim(anim_walk, 0.15, horizontal_speed / speed)
+			_play_anim(anim_walk, 0.15, horizontal_speed / walk_ref_speed)
 	else:
 		if anim_player.has_animation(anim_idle):
 			_play_anim(anim_idle, 0.2, 1.0)

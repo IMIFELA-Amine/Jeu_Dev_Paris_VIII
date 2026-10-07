@@ -21,6 +21,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_05w8q"]
 gradient = SubResource("Gradient_viua4")
+height = 46
 use_hdr = true
 fill = 1
 fill_from = Vector2(0.5, 0.5)
@@ -182,9 +183,9 @@ scale = Vector2(0.35020885, 0.3233001)
 texture = SubResource("GradientTexture2D_pd8um")
 
 [node name="Halo2" type="PointLight2D" parent="." unique_id=422863636]
-position = Vector2(679, 254)
+position = Vector2(677, 245.00002)
 rotation = 3.1406784
-scale = Vector2(1.4521362, 1.2595665)
+scale = Vector2(1.677448, 1.6198077)
 color = Color(1, 0.7019608, 0.2784314, 1)
 energy = 1.2
 texture = SubResource("GradientTexture2D_05w8q")
