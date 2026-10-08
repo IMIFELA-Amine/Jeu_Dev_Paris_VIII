@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Jeu_Dev_Paris_VIII"
 run/main_scene="uid://bdlmuycug61cl"
-config/features=PackedStringArray("4.6", "Forward Plus")
+config/features=PackedStringArray("4.7", "Forward Plus")
 
 [autoload]
 
@@ -26,6 +26,7 @@ window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+mouse_cursor/custom_image="uid://dv1utkxvvfyo3"
 
 [input]
 

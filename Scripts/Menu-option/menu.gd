@@ -11,7 +11,8 @@ extends Node2D
 
 @onready var quit = $menu/quitter/Quitter
 @onready var quit_sel = $menu/quitter/QuitterSelec
-
+@onready var clic1 =$"736851XkerilOneHitSonarInspired"
+@onready var clic2 =$"736852XkerilTransitionHitAndWhoosh"
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	continuer_sel.visible = false
@@ -70,6 +71,7 @@ func _on_quitter_mouse_exited() -> void:
 ########### bouton Appuie ###########
 # Continuer
 func _on_continuer_pressed() -> void:
+	clic1.play()
 	var save_id = get_last_save()
 	if save_id == -1:
 		print("Aucune sauvegarde trouvée")
@@ -81,15 +83,18 @@ func _on_continuer_pressed() -> void:
 		
 # NV
 func _on_nvpartie_pressed() -> void:
+	clic1.play()
 	$Save1.visible =true
 	$Save2.visible =true
 	$Save3.visible =true
-	
+
 # Option
 func _on_option_pressed() -> void:
+	clic1.play()
 	pass # Replace with function body.
 # Quit
 func _on_quitter_pressed() -> void:
+	clic1.play()
 	get_tree().quit()
 
 
@@ -98,17 +103,20 @@ func _on_quitter_pressed() -> void:
 
 
 func _on_save_1_pressed() -> void:
+	clic1.play()
 	SaveManager.create_new_save(1)
 	get_tree().change_scene_to_file(
 		"res://Scenes/Levels/bac.tscn")
 		
 		
 func _on_save_2_pressed() -> void:
+	clic1.play()
 	SaveManager.create_new_save(2)
 	get_tree().change_scene_to_file(
 		"res://Scenes/Levels/bac.tscn")
 
 func _on_save_3_pressed() -> void:
+	clic1.play()
 	SaveManager.create_new_save(3)
 	get_tree().change_scene_to_file(
 		"res://Scenes/Levels/bac.tscn")

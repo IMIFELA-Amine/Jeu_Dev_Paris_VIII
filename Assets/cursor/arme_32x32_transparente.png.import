@@ -2,16 +2,26 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jmvit808i1s6"
+<<<<<<<< HEAD:Assets/Item/test.webp.import
+uid="uid://djqfe6actxjdo"
 path="res://.godot/imported/test.webp-85b22504fb82da0ff8464c704856760d.ctex"
+========
+uid="uid://ci1hewm2baoic"
+path="res://.godot/imported/arme_32x32_transparente.png-7728b3b08e18c704c73a534d53507476.ctex"
+>>>>>>>> 7481ff1c210ba164864a35c5302e9ea167fea0bc:Assets/cursor/arme_32x32_transparente.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
+<<<<<<<< HEAD:Assets/Item/test.webp.import
 source_file="res://Assets/Item/test.webp"
 dest_files=["res://.godot/imported/test.webp-85b22504fb82da0ff8464c704856760d.ctex"]
+========
+source_file="res://Assets/cursor/arme_32x32_transparente.png"
+dest_files=["res://.godot/imported/arme_32x32_transparente.png-7728b3b08e18c704c73a534d53507476.ctex"]
+>>>>>>>> 7481ff1c210ba164864a35c5302e9ea167fea0bc:Assets/cursor/arme_32x32_transparente.png.import
 
 [params]
 

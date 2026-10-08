@@ -105,12 +105,12 @@ spot_attenuation = -2.95
 [node name="inventaire" type="Node" parent="." unique_id=763142756]
 
 [node name="ToucheE" type="Sprite2D" parent="inventaire" unique_id=751077761]
-position = Vector2(76, 625.99994)
+position = Vector2(76, 622.9999)
 scale = Vector2(0.2797293, 0.2797293)
 texture = ExtResource("6_pwyaw")
 
 [node name="Sac" type="Sprite2D" parent="inventaire" unique_id=892128585]
-position = Vector2(32.500004, 623.5)
+position = Vector2(32.500004, 620.49994)
 scale = Vector2(0.522146, 0.522146)
 texture = ExtResource("7_0660c")
 
