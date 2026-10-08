@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
-@export var speed: float = 5.0
-@export var back_speed: float = 3.5   # Vitesse de déplacement en marche arrière
-@export var sprint_speed: float = 8.5
+@export var speed: float = 4
+@export var back_speed: float = 1   # Vitesse de déplacement en marche arrière
+@export var sprint_speed: float = 7
 
 # Physique réactive (virages fluides et arrêt net sans glissement)
 @export var acceleration: float = 28.0
@@ -32,9 +32,9 @@ extends CharacterBody3D
 # Vitesse de déplacement pour laquelle les pieds collent au sol (animation à vitesse 1.0)
 # Si ça patine : l'animation est trop lente pour le déplacement -> BAISSE la valeur
 # Si les pieds "courent sur place" plus vite que le sol : -> AUGMENTE la valeur
-@export var walk_ref_speed: float = 5.0
-@export var back_ref_speed: float = 3.5
-@export var run_ref_speed: float = 8.5
+@export var walk_ref_speed: float = 4
+@export var back_ref_speed: float = 1
+@export var run_ref_speed: float = 7
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 var pitch: float = 0.0

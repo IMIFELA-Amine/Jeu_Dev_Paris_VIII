@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b8ujbc3pjhjf5"
-path="res://.godot/imported/searsia_lucida_1k.blend-334c6a90f32c84879b23b4d96c53e157.scn"
+path="res://.godot/imported/searsia_lucida_1k.blend-182add5ba69d65268bdcc2025c56b54c.scn"
 
 [deps]
 
-source_file="res://Assets/Map/3D/ARBRE/ARBRE4/searsia_lucida_1k.blend"
-dest_files=["res://.godot/imported/searsia_lucida_1k.blend-334c6a90f32c84879b23b4d96c53e157.scn"]
+source_file="res://Assets/Map/Map/3D/ARBRE/ARBRE4/searsia_lucida_1k.blend"
+dest_files=["res://.godot/imported/searsia_lucida_1k.blend-182add5ba69d65268bdcc2025c56b54c.scn"]
 
 [params]
 

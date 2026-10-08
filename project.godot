@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.7", "Forward Plus")
 [autoload]
 
 Save="*uid://blxjirekxkyu3"
+GameManager="*uid://bfhwgvjnst2vo"
 SaveManager="*uid://b24orxru8u565"
 ItemDatabase="*uid://cpy0m6jpdmsuk"
 
@@ -27,10 +28,6 @@ window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 mouse_cursor/custom_image="uid://dv1utkxvvfyo3"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/terrain_3d/plugin.cfg")
 
 [filesystem]
 

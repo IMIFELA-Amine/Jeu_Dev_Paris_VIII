@@ -27,19 +27,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3451084, 0, 0.046503067)
 material_override = SubResource("StandardMaterial3D_xm53j")
 mesh = SubResource("PlaneMesh_jwix5")
 
-[node name="Lieu_village" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="0" unique_id=305525509]
+[node name="Lieu_village2" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="0" unique_id=305525509]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.48, 18.555916, 819.2)
 
-[node name="Lieu_chapelle" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="1" unique_id=2012437747]
+[node name="Lieu_chapelle2" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="1" unique_id=2012437747]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.36, 23.84375, 471.04)
 
-[node name="Lieu_gel" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="2" unique_id=1706348030]
+[node name="Lieu_gel2" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="2" unique_id=1706348030]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -614.4, 47.050014, 122.88)
 
-[node name="Lieu_rouille" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="3" unique_id=2127395644]
+[node name="Lieu_rouille2" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="3" unique_id=2127395644]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 593.92, 52.86427, -122.88)
 
-[node name="Lieu_tour" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="4" unique_id=661805087]
+[node name="Lieu_tour2" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="4" unique_id=661805087]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.4, 197.64134, -696.32)
 
 [editable path="Node3D2"]
