@@ -85,6 +85,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera_pivot.rotation.x = pitch
 
 func _physics_process(delta: float) -> void:
+	# Si inventaire ouvert
+	var inventaire = get_tree().get_first_node_in_group("inventory")
+	if inventaire and inventaire.visible:
+		velocity = Vector3.ZERO
+		return
+		
+		
 	# Décompte du cooldown de saut
 	if jump_cooldown > 0.0:
 		jump_cooldown -= delta
@@ -170,3 +177,19 @@ func _play_anim(anim_name: String, blend_time: float = 0.15, anim_speed: float =
 			anim_player.play(anim_name, blend_time)
 		
 		anim_player.speed_scale = anim_speed
+		
+
+func _input(event):
+	if event.is_action_pressed("ouvrir_inventaire"):
+		toggle_inventory()
+
+func toggle_inventory():
+	var inventaire = get_tree().get_first_node_in_group("inventory")
+	if not inventaire:
+		print("Rien trouvee")
+		return
+	inventaire.visible = !inventaire.visible
+	if inventaire.visible:
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	else:
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED

@@ -1,0 +1,14 @@
+{
+	"inventory": [
+		{
+			"id": "pistolet_mk1",
+			"quantity": 1,
+			"stats": {
+				"cadence": 5,
+				"degats": 42,
+				"precision": 78
+			}
+		}
+	],
+	"save_name": "Sauvegarde 1"
+}

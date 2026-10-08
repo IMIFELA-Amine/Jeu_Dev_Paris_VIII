@@ -18,6 +18,21 @@ func _ready() -> void:
 	nv_sel.visible = false
 	option_sel.visible = false
 	quit_sel.visible = false
+	$Save1.visible =false
+	$Save2.visible =false
+	$Save3.visible =false
+	
+
+
+func get_last_save() -> int:
+	var last_save := -1
+	for i in range(1, 4):
+		if SaveManager.save_exists(i):
+			last_save = i
+	return last_save
+
+
+
 
 # CONTINUER: Select/pas select quand on passe la sourit
 func _on_continuer_mouse_entered() -> void:
@@ -55,13 +70,46 @@ func _on_quitter_mouse_exited() -> void:
 ########### bouton Appuie ###########
 # Continuer
 func _on_continuer_pressed() -> void:
-	pass # Replace with function body.
+	var save_id = get_last_save()
+	if save_id == -1:
+		print("Aucune sauvegarde trouvée")
+		return
+	if SaveManager.load_save(save_id):
+		get_tree().change_scene_to_file(
+			"res://Scenes/Levels/bac.tscn"
+		)
+		
 # NV
 func _on_nvpartie_pressed() -> void:
-	pass # Replace with function body.
+	$Save1.visible =true
+	$Save2.visible =true
+	$Save3.visible =true
+	
 # Option
 func _on_option_pressed() -> void:
 	pass # Replace with function body.
 # Quit
 func _on_quitter_pressed() -> void:
 	get_tree().quit()
+
+
+
+
+
+
+func _on_save_1_pressed() -> void:
+	SaveManager.create_new_save(1)
+	get_tree().change_scene_to_file(
+		"res://Scenes/Levels/bac.tscn")
+		
+		
+func _on_save_2_pressed() -> void:
+	SaveManager.create_new_save(2)
+	get_tree().change_scene_to_file(
+		"res://Scenes/Levels/bac.tscn")
+
+func _on_save_3_pressed() -> void:
+	SaveManager.create_new_save(3)
+	get_tree().change_scene_to_file(
+		"res://Scenes/Levels/bac.tscn")
+		

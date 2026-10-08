@@ -41,14 +41,15 @@ fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(0.5, 0)
 
 [node name="Node2D" type="Node2D" unique_id=1957835166]
+position = Vector2(0, 18)
 script = ExtResource("1_viua4")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1644462858]
 color = Color(0.3137255, 0.3137255, 0.41568628, 1)
 
 [node name="backGround" type="Sprite2D" parent="." unique_id=579957693]
-position = Vector2(575, 324)
-scale = Vector2(0.6867633, 0.6927807)
+position = Vector2(575, 340.5625)
+scale = Vector2(0.6867633, 0.7795455)
 texture = ExtResource("2_5do38")
 
 [node name="menu" type="Control" parent="." unique_id=787152699]
@@ -56,6 +57,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
 
 [node name="Accueil" type="Label" parent="menu" unique_id=1635194041]
 layout_mode = 0
@@ -68,6 +70,7 @@ scale = Vector2(1.100244, 0.8203656)
 text = "Accueil
 "
 label_settings = SubResource("LabelSettings_5p1lm")
+metadata/_edit_use_anchors_ = true
 
 [node name="continuer" type="Button" parent="menu" unique_id=1017436826]
 layout_mode = 0
@@ -77,6 +80,7 @@ offset_right = 135.00002
 offset_bottom = 155.0
 rotation = -0.0722234
 scale = Vector2(54.62466, 4.9927306)
+metadata/_edit_use_anchors_ = true
 
 [node name="Continuer" type="Sprite2D" parent="menu/continuer" unique_id=242378166]
 position = Vector2(3.7939138, 3.6055603)
@@ -100,6 +104,7 @@ offset_right = 150.0
 offset_bottom = 209.0
 rotation = -0.053690143
 scale = Vector2(48.78248, 6.8456655)
+metadata/_edit_use_anchors_ = true
 
 [node name="NvPartie" type="Sprite2D" parent="menu/nvpartie" unique_id=1808922663]
 position = Vector2(4.0346913, 3.4133897)
@@ -121,6 +126,7 @@ offset_right = 163.99998
 offset_bottom = 269.00003
 rotation = -0.07361025
 scale = Vector2(48.413185, 6.9770684)
+metadata/_edit_use_anchors_ = true
 
 [node name="Option" type="Sprite2D" parent="menu/option" unique_id=389085317]
 position = Vector2(3.9132564, 4.014427)
@@ -137,6 +143,7 @@ texture = ExtResource("8_25kfc")
 layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
+metadata/_edit_use_anchors_ = true
 
 [node name="quitter" type="Button" parent="menu" unique_id=591170800]
 layout_mode = 0
@@ -146,6 +153,7 @@ offset_right = 174.0
 offset_bottom = 397.99997
 rotation = -0.09915568
 scale = Vector2(46.922886, 6.763127)
+metadata/_edit_use_anchors_ = true
 
 [node name="Quitter" type="Sprite2D" parent="menu/quitter" unique_id=1134627113]
 position = Vector2(4.0145397, 3.8110144)
@@ -205,6 +213,34 @@ position = Vector2(0.90338904, -4.0967402)
 scale = Vector2(0.53363585, 0.4520188)
 texture = SubResource("GradientTexture2D_pd8um")
 
+[node name="Save1" type="Button" parent="." unique_id=1995365487]
+offset_left = 225.0
+offset_top = 195.0
+offset_right = 418.0
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 39
+text = "SAVE 1
+"
+
+[node name="Save2" type="Button" parent="." unique_id=780562092]
+offset_left = 450.0
+offset_top = 184.0
+offset_right = 643.0
+offset_bottom = 312.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 39
+text = "SAVE 2"
+
+[node name="Save3" type="Button" parent="." unique_id=1921232207]
+offset_left = 682.0
+offset_top = 183.0
+offset_right = 875.0
+offset_bottom = 311.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 39
+text = "SAVE 3"
+
 [connection signal="mouse_entered" from="menu/continuer" to="." method="_on_continuer_mouse_entered"]
 [connection signal="mouse_exited" from="menu/continuer" to="." method="_on_continuer_mouse_exited"]
 [connection signal="pressed" from="menu/continuer" to="." method="_on_continuer_pressed"]
@@ -217,3 +253,6 @@ texture = SubResource("GradientTexture2D_pd8um")
 [connection signal="mouse_entered" from="menu/quitter" to="." method="_on_quitter_mouse_entered"]
 [connection signal="mouse_exited" from="menu/quitter" to="." method="_on_quitter_mouse_exited"]
 [connection signal="pressed" from="menu/quitter" to="." method="_on_quitter_pressed"]
+[connection signal="pressed" from="Save1" to="." method="_on_save_1_pressed"]
+[connection signal="pressed" from="Save2" to="." method="_on_save_2_pressed"]
+[connection signal="pressed" from="Save3" to="." method="_on_save_3_pressed"]

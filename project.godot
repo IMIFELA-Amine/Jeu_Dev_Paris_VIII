@@ -13,12 +13,12 @@ config_version=5
 config/name="Jeu_Dev_Paris_VIII"
 run/main_scene="uid://bdlmuycug61cl"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
 
 [autoload]
 
 Save="*uid://blxjirekxkyu3"
-GameManager="*uid://bfhwgvjnst2vo"
+SaveManager="*uid://b24orxru8u565"
+ItemDatabase="*uid://cpy0m6jpdmsuk"
 
 [display]
 
@@ -26,6 +26,15 @@ window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[input]
+
+ouvrir_inventaire={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":69,"physical_keycode":0,"key_label":0,"unicode":69,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
 
 [physics]
 

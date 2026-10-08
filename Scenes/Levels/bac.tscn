@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://cfm2p0qpbr6x2"]
 
 [ext_resource type="PackedScene" uid="uid://doax7febbm4tt" path="res://Scenes/Characters/Perso.tscn" id="1_03nni"]
+[ext_resource type="PackedScene" uid="uid://devb852vtmdrs" path="res://Scenes/UI-Inventaire/ui.tscn" id="2_c8vy4"]
 
-[node name="Node3D" type="Node3D" unique_id=1704194263]
+[node name="Node3D2" type="Node3D" unique_id=1704194263]
 
 [node name="Node3D" parent="." unique_id=363878667 instance=ExtResource("1_03nni")]
 
@@ -30,3 +31,6 @@ size = Vector3(0.9034424, 1, 1)
 transform = Transform3D(-0.20633939, 0, 0.97848046, 0, 1, 0, -0.97848046, 0, -0.20633939, 3.0038478, 0.80693746, 3.3064857)
 use_collision = true
 size = Vector3(0.9034424, 1, 1)
+
+[node name="UI" parent="." unique_id=170107170 instance=ExtResource("2_c8vy4")]
+visible = true
