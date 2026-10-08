@@ -2,34 +2,44 @@
 
 [ext_resource type="PackedScene" uid="uid://doax7febbm4tt" path="res://Scenes/Characters/Perso.tscn" id="1_03nni"]
 [ext_resource type="PackedScene" uid="uid://devb852vtmdrs" path="res://Scenes/UI-Inventaire/ui.tscn" id="2_c8vy4"]
+[ext_resource type="PackedScene" uid="uid://crswy56o76jd3" path="res://Assets/Map/Map/node_3d.tscn" id="3_xm53j"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xm53j"]
+transparency = 1
+albedo_color = Color(0.1, 0.28, 0.38, 0.74)
+metallic = 0.1
+roughness = 0.06
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jwix5"]
+size = Vector2(2048, 2048)
 
 [node name="Node3D2" type="Node3D" unique_id=1704194263]
 
 [node name="Node3D" parent="." unique_id=363878667 instance=ExtResource("1_03nni")]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=249876249]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3488307, -0.5734521, -0.29141712)
-use_collision = true
-size = Vector3(28.649551, 0.9506836, 37.187057)
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1951144149]
-transform = Transform3D(-0.20633939, 0, 0.97848046, 0, 1, 0, -0.97848046, 0, -0.20633939, 3.0038478, 0.80693746, 3.3064857)
-use_collision = true
-size = Vector3(0.9034424, 1, 1)
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=700007007]
-transform = Transform3D(0.6299447, 0, 0.77664, 0, 1, 0, -0.77664, 0, 0.6299447, 0.7141828, 0.40346873, 2.3688831)
-use_collision = true
-size = Vector3(0.9034424, 1, 1)
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=2048785753]
-transform = Transform3D(-0.88990945, 0, 0.45613712, 0, 1, 0, -0.45613712, 0, -0.88990945, 5.17439, 1.2104062, 2.118878)
-use_collision = true
-size = Vector3(0.9034424, 1, 1)
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=2037218211]
-transform = Transform3D(-0.20633939, 0, 0.97848046, 0, 1, 0, -0.97848046, 0, -0.20633939, 3.0038478, 0.80693746, 3.3064857)
-use_collision = true
-size = Vector3(0.9034424, 1, 1)
+transform = Transform3D(0.99963254, -0.027107395, 0, 0.027107395, 0.99963254, 0, 0, 0, 1, -214.93248, 26.17733, 442.33572)
 
 [node name="UI" parent="." unique_id=170107170 instance=ExtResource("2_c8vy4")]
+
+[node name="Node3D2" parent="." unique_id=1529803397 instance=ExtResource("3_xm53j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3451084, 0, 0.046503067)
+
+[node name="Eau" parent="Node3D2" index="1" unique_id=1454346993]
+material_override = SubResource("StandardMaterial3D_xm53j")
+mesh = SubResource("PlaneMesh_jwix5")
+
+[node name="Lieu_village" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="0" unique_id=305525509]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.48, 18.555916, 819.2)
+
+[node name="Lieu_chapelle" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="1" unique_id=2012437747]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.36, 23.84375, 471.04)
+
+[node name="Lieu_gel" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="2" unique_id=1706348030]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -614.4, 47.050014, 122.88)
+
+[node name="Lieu_rouille" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="3" unique_id=2127395644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 593.92, 52.86427, -122.88)
+
+[node name="Lieu_tour" type="Marker3D" parent="Node3D2/Lieux" parent_id_path=PackedInt32Array(1529803397, 1706452540) index="4" unique_id=661805087]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.4, 197.64134, -696.32)
+
+[editable path="Node3D2"]

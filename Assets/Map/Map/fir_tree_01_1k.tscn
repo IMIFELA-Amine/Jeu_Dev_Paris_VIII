@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://1vi4634bmhx1"]
+
+[ext_resource type="PackedScene" uid="uid://capn0n3wv5mw" path="res://Assets/Map/3D/ARBRE/ARBRE2/fir_tree_01_1k.blend" id="1_ow7kh"]
+[ext_resource type="Texture2D" uid="uid://1mmb11sbcp0p" path="res://Assets/Map/3D/ARBRE/ARBRE2/textures/fir_tree_01_trunk_a_diff_1k.png" id="2_t3rnm"]
+[ext_resource type="Shader" uid="uid://dpfvi6t5w44rc" path="res://Assets/Map/fir_tree_01_1k.gdshader" id="3_vd0fv"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rmdr4"]
+albedo_texture = ExtResource("2_t3rnm")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jq1ne"]
+render_priority = 0
+shader = ExtResource("3_vd0fv")
+shader_parameter/seuil_alpha = 0.5
+shader_parameter/vitesse_vent = 1.3
+shader_parameter/force_vent = 0.12
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ujuve"]
+albedo_texture = ExtResource("2_t3rnm")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_naa4u"]
+albedo_texture = ExtResource("2_t3rnm")
+
+[node name="fir_tree_01_1k" unique_id=753602880 instance=ExtResource("1_ow7kh")]
+
+[node name="fir_tree_01_a_LOD1" parent="." index="1" unique_id=897014314]
+surface_material_override/0 = SubResource("StandardMaterial3D_rmdr4")
+surface_material_override/1 = SubResource("ShaderMaterial_jq1ne")
+surface_material_override/2 = SubResource("StandardMaterial3D_ujuve")
+surface_material_override/3 = SubResource("StandardMaterial3D_naa4u")
+
+[node name="fir_tree_01_b_LOD0" parent="." index="3" unique_id=440170852]
+visible = false
+
+[node name="fir_tree_01_b_LOD1" parent="." index="4" unique_id=977392999]
+visible = false
+
+[node name="fir_tree_01_b_LOD2" parent="." index="5" unique_id=1407522570]
+visible = false
+
+[node name="fir_tree_01_c_LOD0" parent="." index="6" unique_id=1082228134]
+visible = false
+
+[node name="fir_tree_01_c_LOD1" parent="." index="7" unique_id=1177343414]
+visible = false
+
+[node name="fir_tree_01_c_LOD2" parent="." index="8" unique_id=2099689761]
+visible = false
+
+[node name="fir_tree_01_dead_branch_a" parent="." index="9" unique_id=522474188]
+visible = false
+
+[node name="fir_tree_01_dead_branch_b" parent="." index="10" unique_id=854243698]
+visible = false
+
+[node name="fir_tree_01_dead_branch_c" parent="." index="11" unique_id=2035561476]
+visible = false
+
+[node name="fir_tree_01_dead_branch_d" parent="." index="12" unique_id=2054017198]
+visible = false
+
+[node name="fir_tree_01_dead_branch_e" parent="." index="13" unique_id=923398255]
+visible = false
+
+[node name="fir_tree_01_dead_branch_f" parent="." index="14" unique_id=717520256]
+visible = false
+
+[node name="fir_tree_01_dead_branch_g" parent="." index="15" unique_id=538951745]
+visible = false
+
+[node name="fir_tree_01_dead_branch_h" parent="." index="16" unique_id=1763362134]
+visible = false
+
+[node name="fir_tree_01_dead_branch_i" parent="." index="17" unique_id=588520117]
+visible = false
+
+[node name="fir_tree_01_dead_branch_j" parent="." index="18" unique_id=1958415557]
+visible = false
+
+[node name="fir_tree_01_geometry_nodes" parent="." index="19" unique_id=721279676]
+visible = false
+
+[node name="fir_tree_01_needle_a" parent="." index="20" unique_id=177039318]
+visible = false
+
+[node name="fir_tree_01_needle_b" parent="." index="21" unique_id=199286175]
+visible = false
+
+[node name="fir_tree_01_needle_c" parent="." index="22" unique_id=1197426880]
+visible = false
+
+[node name="fir_tree_01_needle_d" parent="." index="23" unique_id=1640557193]
+visible = false
+
+[node name="fir_tree_01_trunk_a" parent="." index="24" unique_id=1711520106]
+visible = false
+
+[node name="fir_tree_01_trunk_b" parent="." index="25" unique_id=1882927428]
+visible = false
+
+[node name="fir_tree_01_trunk_c" parent="." index="26" unique_id=1147463039]
+visible = false
+
+[node name="fir_tree_01_twig_main_a" parent="." index="27" unique_id=133007128]
+visible = false
+
+[node name="fir_tree_01_twig_main_a_LOD1" parent="." index="28" unique_id=237128393]
+visible = false
+
+[node name="fir_tree_01_twig_main_a_LOD2" parent="." index="29" unique_id=545813890]
+visible = false
+
+[node name="fir_tree_01_twig_main_b" parent="." index="30" unique_id=2114906568]
+visible = false
+
+[node name="fir_tree_01_twig_main_b_LOD1" parent="." index="31" unique_id=1058055827]
+visible = false
+
+[node name="fir_tree_01_twig_main_b_LOD2" parent="." index="32" unique_id=1510550772]
+visible = false
+
+[node name="fir_tree_01_twig_main_c" parent="." index="33" unique_id=761158614]
+visible = false
+
+[node name="fir_tree_01_twig_main_c_LOD1" parent="." index="34" unique_id=1618407931]
+visible = false
+
+[node name="fir_tree_01_twig_main_c_LOD2" parent="." index="35" unique_id=1463203272]
+visible = false
+
+[node name="fir_tree_01_twig_tip_a" parent="." index="36" unique_id=1052838865]
+visible = false
+
+[node name="fir_tree_01_twig_tip_a_LOD1" parent="." index="37" unique_id=1798460542]
+visible = false
+
+[node name="fir_tree_01_twig_tip_a_LOD2" parent="." index="38" unique_id=1185475546]
+visible = false
+
+[node name="fir_tree_01_twig_tip_b" parent="." index="39" unique_id=85164173]
+visible = false
+
+[node name="fir_tree_01_twig_tip_b_LOD1" parent="." index="40" unique_id=192811297]
+visible = false
+
+[node name="fir_tree_01_twig_tip_b_LOD2" parent="." index="41" unique_id=36566439]
+visible = false
+
+[node name="fir_tree_01_twig_tip_c" parent="." index="42" unique_id=487695564]
+visible = false
+
+[node name="fir_tree_01_twig_tip_c_LOD1" parent="." index="43" unique_id=430669441]
+visible = false
+
+[node name="fir_tree_01_twig_tip_c_LOD2" parent="." index="44" unique_id=2112215547]
+visible = false
+
+[node name="fir_tree_01_twig_tip_d" parent="." index="45" unique_id=157009910]
+visible = false
+
+[node name="fir_tree_01_twig_tip_d_LOD1" parent="." index="46" unique_id=806791684]
+visible = false
+
+[node name="fir_tree_01_twig_tip_d_LOD2" parent="." index="47" unique_id=1585079811]
+visible = false

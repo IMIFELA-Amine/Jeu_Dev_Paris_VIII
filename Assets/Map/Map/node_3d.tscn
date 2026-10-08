@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://crswy56o76jd3"]
+
+[ext_resource type="Texture2D" uid="uid://c13xdeq3omhjp" path="res://Map/Texture/SLOT0/packed_albedo_height.png" id="1_6iypd"]
+[ext_resource type="Texture2D" uid="uid://ccjcrwvcwfwwa" path="res://Map/Texture/SLOT0/packed_normal_roughness.png" id="2_tereu"]
+[ext_resource type="Texture2D" uid="uid://dmxorsnvcdo6e" path="res://Map/Texture/SLOT1/packed_albedo_height.png" id="3_6iypd"]
+[ext_resource type="Texture2D" uid="uid://gakabafeu6dl" path="res://Map/Texture/SLOT1/packed_normal_roughness.png" id="4_tereu"]
+[ext_resource type="Texture2D" uid="uid://cjgbormso8qra" path="res://Map/Texture/SLOT2/packed_albedo_height.png" id="5_cdqbm"]
+[ext_resource type="Texture2D" uid="uid://fyhtc068abwa" path="res://Map/Texture/SLOT2/packed_normal_roughness.png" id="6_imku0"]
+[ext_resource type="Texture2D" uid="uid://bt55bmo2h5bmp" path="res://Map/Texture/SLOT3/packed_albedo_height.png" id="7_wlxy5"]
+[ext_resource type="Texture2D" uid="uid://dlr2xk17kmnec" path="res://Map/Texture/SLOT3/packed_normal_roughness.png" id="8_3v7ru"]
+[ext_resource type="Texture2D" uid="uid://dgms81pgyg6n2" path="res://Map/Texture/SLOT4/packed_albedo_height.png" id="9_tcnuu"]
+[ext_resource type="Texture2D" uid="uid://bsdtk4jo0rv6b" path="res://Map/Texture/SLOT4/packed_normal_roughness.png" id="10_tuemg"]
+
+[sub_resource type="Gradient" id="Gradient_4xowi"]
+offsets = PackedFloat32Array(0.2, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_a202f"]
+noise_type = 2
+frequency = 0.03
+cellular_jitter = 3.0
+cellular_return_type = 0
+domain_warp_enabled = true
+domain_warp_type = 1
+domain_warp_amplitude = 50.0
+domain_warp_fractal_type = 2
+domain_warp_fractal_lacunarity = 1.5
+domain_warp_fractal_gain = 1.0
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_noarx"]
+noise = SubResource("FastNoiseLite_a202f")
+color_ramp = SubResource("Gradient_4xowi")
+seamless = true
+
+[sub_resource type="Terrain3DMaterial" id="Terrain3DMaterial_a0tk4"]
+_shader_parameters = {
+&"bias_distance": null,
+&"blend_sharpness": null,
+&"depth_blur": null,
+&"enable_macro_variation": null,
+&"enable_projection": null,
+&"flat_terrain_normals": null,
+&"macro_variation1": null,
+&"macro_variation2": null,
+&"macro_variation_slope": null,
+&"mipmap_bias": null,
+&"noise1_angle": null,
+&"noise1_offset": null,
+&"noise1_scale": null,
+&"noise2_scale": null,
+&"noise_texture": SubResource("NoiseTexture2D_noarx"),
+&"projection_threshold": null
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r3fl7"]
+transparency = 4
+cull_mode = 2
+vertex_color_use_as_albedo = true
+backlight_enabled = true
+backlight = Color(0.5, 0.5, 0.5, 1)
+distance_fade_mode = 1
+distance_fade_min_distance = 128.0
+distance_fade_max_distance = 96.0
+
+[sub_resource type="Terrain3DMeshAsset" id="Terrain3DMeshAsset_jka67"]
+generated_type = 1
+height_offset = 0.5
+material_override = SubResource("StandardMaterial3D_r3fl7")
+last_lod = 0
+last_shadow_lod = 0
+lod0_range = 128.0
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_6iypd"]
+name = "packed_albedo_height"
+albedo_texture = ExtResource("1_6iypd")
+normal_texture = ExtResource("2_tereu")
+roughness = 0.5
+uv_scale = 0.035
+detiling_rotation = 0.217
+detiling_shift = 0.945
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_tereu"]
+name = "packed_albedo_height"
+id = 1
+albedo_texture = ExtResource("3_6iypd")
+normal_texture = ExtResource("4_tereu")
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_cdqbm"]
+name = "packed_albedo_height"
+id = 2
+albedo_texture = ExtResource("5_cdqbm")
+normal_texture = ExtResource("6_imku0")
+uv_scale = 0.005
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_imku0"]
+name = "packed_albedo_height"
+id = 3
+albedo_texture = ExtResource("7_wlxy5")
+normal_texture = ExtResource("8_3v7ru")
+detiling_rotation = 0.457
+detiling_shift = 0.337
+
+[sub_resource type="Terrain3DTextureAsset" id="Terrain3DTextureAsset_wlxy5"]
+name = "packed_albedo_height"
+id = 4
+albedo_texture = ExtResource("9_tcnuu")
+normal_texture = ExtResource("10_tuemg")
+
+[sub_resource type="Terrain3DAssets" id="Terrain3DAssets_i5arm"]
+mesh_list = Array[Terrain3DMeshAsset]([SubResource("Terrain3DMeshAsset_jka67")])
+texture_list = Array[Terrain3DTextureAsset]([SubResource("Terrain3DTextureAsset_6iypd"), SubResource("Terrain3DTextureAsset_tereu"), SubResource("Terrain3DTextureAsset_cdqbm"), SubResource("Terrain3DTextureAsset_imku0"), SubResource("Terrain3DTextureAsset_wlxy5")])
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3v7ru"]
+transparency = 1
+albedo_color = Color(0.1, 0.28, 0.38, 0.74)
+metallic = 0.1
+roughness = 0.06
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tcnuu"]
+size = Vector2(2048, 2048)
+
+[node name="Node3D" type="Node3D" unique_id=1529803397]
+
+[node name="Terrain3D" type="Terrain3D" parent="." unique_id=386654818]
+data_directory = "res://Data_Terrain"
+material = SubResource("Terrain3DMaterial_a0tk4")
+assets = SubResource("Terrain3DAssets_i5arm")
+top_level = true
+metadata/_edit_lock_ = true
+
+[node name="Eau" type="MeshInstance3D" parent="." unique_id=1454346993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+material_override = SubResource("StandardMaterial3D_3v7ru")
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_tcnuu")
+
+[node name="Lieux" type="Node3D" parent="." unique_id=1706452540]
+
+[node name="Lieu_village" type="Marker3D" parent="Lieux" unique_id=1021307215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.48, 18.555916, 819.2)
+
+[node name="Lieu_chapelle" type="Marker3D" parent="Lieux" unique_id=432706947]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -143.36, 23.84375, 471.04)
+
+[node name="Lieu_gel" type="Marker3D" parent="Lieux" unique_id=2083080159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -614.4, 47.050014, 122.88)
+
+[node name="Lieu_rouille" type="Marker3D" parent="Lieux" unique_id=109644700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 593.92, 52.86427, -122.88)
+
+[node name="Lieu_tour" type="Marker3D" parent="Lieux" unique_id=256352975]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 102.4, 197.64134, -696.32)
