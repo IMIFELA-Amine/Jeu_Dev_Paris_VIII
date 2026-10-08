@@ -7,7 +7,7 @@
 [node name="Node3D" parent="." unique_id=363878667 instance=ExtResource("1_03nni")]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=249876249]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3890762, -0.90491676, -0.29526854)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3488307, -0.5734521, -0.29141712)
 use_collision = true
 size = Vector3(28.649551, 0.9506836, 37.187057)
 

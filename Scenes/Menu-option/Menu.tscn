@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://ktdgwyeculbm" path="res://Assets/Menu/quitter.png" id="9_h1hd1"]
 [ext_resource type="Texture2D" uid="uid://bmjvi1aun5dvo" path="res://Assets/Menu/quitter_sel.png" id="10_nxrto"]
 [ext_resource type="Script" uid="uid://bfqvysvj0gklg" path="res://Scenes/Menu-option/halo.gd" id="11_5do38"]
+[ext_resource type="AudioStream" uid="uid://bbf6r71mdll1k" path="res://music/736852__xkeril__transition-hit-and-whoosh.wav" id="12_h1t7w"]
+[ext_resource type="AudioStream" uid="uid://dopxulyesjhrd" path="res://music/736851__xkeril__one-hit-sonar-inspired.wav" id="13_gdpsg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5p1lm"]
 font_size = 48
@@ -50,6 +52,12 @@ color = Color(0.3137255, 0.3137255, 0.41568628, 1)
 position = Vector2(575, 324)
 scale = Vector2(0.6867633, 0.6927807)
 texture = ExtResource("2_5do38")
+
+[node name="736851XkerilOneHitSonarInspired" type="AudioStreamPlayer" parent="." unique_id=951640688]
+stream = ExtResource("13_gdpsg")
+
+[node name="736852XkerilTransitionHitAndWhoosh" type="AudioStreamPlayer" parent="." unique_id=162088959]
+stream = ExtResource("12_h1t7w")
 
 [node name="menu" type="Control" parent="." unique_id=787152699]
 layout_mode = 3
@@ -178,7 +186,7 @@ dim_max_delay = 15.0
 [node name="Sprite2D" type="Sprite2D" parent="Halo" unique_id=11426019]
 modulate = Color(1, 0.6901961, 0.2509804, 1)
 material = SubResource("CanvasItemMaterial_h1t7w")
-position = Vector2(6.4162436, 0.71686053)
+position = Vector2(5.92278, 0.5741125)
 scale = Vector2(0.35020885, 0.3233001)
 texture = SubResource("GradientTexture2D_pd8um")
 
