@@ -16,7 +16,7 @@ size = Vector2(2048, 2048)
 [node name="Node3D2" type="Node3D" unique_id=1704194263]
 
 [node name="Node3D" parent="." unique_id=363878667 instance=ExtResource("1_03nni")]
-transform = Transform3D(0.99963254, -0.027107395, 0, 0.027107395, 0.99963254, 0, 0, 0, 1, -214.93248, 26.17733, 442.33572)
+transform = Transform3D(0.99963254, -0.027107395, 0, 0.027107395, 0.99963254, 0, 0, 0, 1, -179.60698, 17.981834, 423.36288)
 
 [node name="UI" parent="." unique_id=170107170 instance=ExtResource("2_c8vy4")]
 

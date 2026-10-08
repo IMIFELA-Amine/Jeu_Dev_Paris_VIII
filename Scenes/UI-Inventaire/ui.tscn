@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://devb852vtmdrs"]
 
-[ext_resource type="Script" uid="uid://c3h6nore5hm4f" path="res://Scripts/Menu-option/ui.gd" id="1_yvi3c"]
 [ext_resource type="Shader" uid="uid://dotjyb1ap1pf4" path="res://Shader/ui.gdshader" id="3_0laa4"]
 [ext_resource type="Texture2D" uid="uid://bstk2ioqko1s2" path="res://Assets/UI/progress-bar-frame.png" id="3_0p0q4"]
 [ext_resource type="Texture2D" uid="uid://dwkmfrqgwr00c" path="res://Assets/UI/progress-bar-circle.png" id="4_xld48"]
@@ -8,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://dokkq0d5542v" path="res://Assets/UI/touche e.png" id="6_pwyaw"]
 [ext_resource type="Texture2D" uid="uid://xmuy8w4b7bf7" path="res://Assets/UI/sac.png" id="7_0660c"]
 [ext_resource type="PackedScene" uid="uid://qaqtgjfhpsfa" path="res://Scenes/UI-Inventaire/Inventaire.tscn" id="8_fpyt2"]
+
+[sub_resource type="GDScript" id="GDScript_ou5wi"]
+script/source = "extends CanvasLayer
+"
 
 [sub_resource type="Shader" id="Shader_fpyt2"]
 code = "shader_type canvas_item;
@@ -40,7 +43,7 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="PlaneMesh" id="PlaneMesh_0660c"]
 
 [node name="UI" type="CanvasLayer" unique_id=170107170]
-script = ExtResource("1_yvi3c")
+script = SubResource("GDScript_ou5wi")
 
 [node name="CAM_life" type="Node" parent="." unique_id=925535573]
 
